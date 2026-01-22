@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pogoda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <b><h1> Sprawdź pogodę w swoim mieście! </h1></b>
+        <nav>
+        <a href="index.html" class="active">Pogoda</a>
+        <a href="about.html">O projekcie</a>
+    </nav>
+    </header>
+    <div class="main">
+        <div class="column left-side">
+            <div class="weather-card">
+                <h2>Wybierz miasto:</h2>
+                <select id="city-select">
+                    <option value="">-- Wybierz z listy --</option>
+                    <option value="poznan">Poznań</option>
+                    <option value="warszawa">Warszawa</option>
+                    <option value="krakow">Kraków</option>
+                    <option value="gdansk">Gdańsk</option>
+                    <option value="wroclaw">Wrocław</option>
+                </select>
+
+                <div id="weather-result" class="result hidden">
+                    <div class="icon" id="weather-icon"></div>
+                    <div class="temp" id="weather-temp"></div>
+                    <div class="desc" id="weather-desc"></div>
+                    
+                    <div class="details">
+                        <div>💨 <span id="wind">0</span> km/h</div>
+                        <div>💧 <span id="humidity">0</span>%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column right-side">
+            <div class="map-card">
+                <h3>Lokalizacja</h3>
+                <iframe 
+                    id="city-map"
+                    width="100%" 
+                    height="300" 
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=14.0,49.0,24.0,55.0&amp;layer=mapnik" 
+                    style="border: 1px solid #ccc; border-radius: 10px;">
+                </iframe>
+            </div>
+        </div>
+</div>
+
+</div>
+        <script src="script.js"></script>
+    </div>
+    <footer>
+    <p>&copy; pogooooooda </p>
+    <p>Z nami będziesz znał każdą pogodę</p>
+</footer>
+</body>
+</html>
